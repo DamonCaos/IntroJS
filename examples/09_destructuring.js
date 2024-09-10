@@ -4,8 +4,10 @@ console.log('09');
 const twilight = {title: 'Twilight', author: 'Stephenie Meyer', year: 2005};
 const { title } = {title: 'Twilight', author: 'Stephenie Meyer', year: 2005};
 
+console.log(twilight.title);
+console.log(title)
 
-const books = [
+const [firsBook, secondBook] = [
     { title: '1984', author: 'George Orwell', year: 1949 },
     {
     title: 'One Hundred Years of Solitude',
@@ -21,3 +23,6 @@ const books = [
     { title: 'Twilight', author: 'Stephenie Meyer', year: 2005 },
     { title: 'The Hunger Games', author: 'Suzanne Collins', year: 2008 },
 ]
+
+console.log(firsBook);
+console.log(secondBook);
