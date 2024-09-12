@@ -44,6 +44,6 @@ switch (day) {
     case 'tuesday':
         console.log('Hay clase');
         break;
- default:
+default:
     console.log('No hay clase');     
 }
