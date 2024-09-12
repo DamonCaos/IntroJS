@@ -87,7 +87,7 @@ Ejericio Calculadora con closures
 Crear una calculadora con las siguientes funciones:
 */
 
-const calculadora = () => {
+/*const calculadora = () => {
     let result = 0;
     return{
         sumar: (numero) => {result + numero},
@@ -96,7 +96,20 @@ const calculadora = () => {
         dividir: (numero) => {result / numero},
         total: () => result,
     };
+};*/
+
+const calculadora = () => {
+    let result = 0;
+    
+    const sumar = numero => {numero + result};
+    const restar = numero => {numero - result};
+    const multiplicar = numero => {result * numero};
+    const dividir = numero => {result / numero};
+    const total = () => result
+    return {sumar, restar, multiplicar, dividir, total}
 };
+
+
 
 const miCalculadora = calculadora();
 
@@ -106,3 +119,28 @@ console.log(miCalculadora.multiplicar(4)); // Debería imprimir undefined
 console.log(miCalculadora.dividir(2)); // Debería imprimir undefined
 console.log(miCalculadora.sumar(10)); // Debería imprimir undefined
 console.log(miCalculadora.total()); // Debería imprimir 16
+
+
+
+const operations = (num1, num2, operation) => {
+if (operation === 'resta') {
+    return num1 - num2;
+} else if (operation === 'suma') {
+    num1 + num2
+}
+
+};
+
+const sum = (valor1, valor2) => {
+    const op = valor1 + valor2;
+    return op;
+};
+
+const resta = (num1, num2) => num1 - num2;
+
+const operationV2 = (num1, num2, operationFn) => {
+    return operationFn(num1, num2);
+};
+
+operationV2(2,3, sum);
+operationV2(2,3, resta);
