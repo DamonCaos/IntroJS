@@ -59,7 +59,7 @@ const cart = () => {
         quantity
     }]
     };
-
+//export
     const getProducts = () => {
     return products;
 };
